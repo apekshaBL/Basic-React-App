@@ -1,7 +1,9 @@
+import Header from './components/header/Header.jsx'
+import Footer from './components/Footer/Footer.jsx'
+import Home from './components/Home/Home.jsx'
 function App(){
   return(
      <>
-     <h1>happy birthday</h1>
    
      </>
   )
