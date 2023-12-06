@@ -5,9 +5,11 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './components/Home/Home.jsx';
 import About from './components/About/About.jsx';
+import Contact from './components/Contact/Contact.jsx';
 import Layout from './Layout.jsx'
+import Github from './components/Github/Github.jsx'
 
-const router=createBrowserRouter([
+ const router=createBrowserRouter([
   {
     path:"/",
     element:<Layout/>,
@@ -19,10 +21,32 @@ const router=createBrowserRouter([
     {
       path:"about",
       element:<About/>
+    },
+    {
+      path:"contact",
+      element:<Contact/>
+    },
+    {
+      path:"Github",
+      element:<Github/>
     }
   ]
 }
-])
+]) 
+
+
+/*this is another method to create routing
+const router=createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Layout/>}>
+     <Route path='' element={<Home/>}/>
+      <Route path='About' element={<About/>}/>
+       <Route path='Contact' element={<Contact/>}/>
+       </Route>
+  )
+)*/
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
